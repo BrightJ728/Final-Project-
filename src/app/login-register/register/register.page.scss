@@ -1,0 +1,66 @@
+.p1 {
+  font-weight: bolder;
+}
+
+h5, p {
+  text-align: center;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 767px) {
+  ion-card {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ion-title{
+  font-size: large;
+  font-weight: bolder;
+  }
+
+
+.register-button {
+  --background:#424; 
+  color:#FFFFFF; 
+  --background-hover:#424; 
+  --color-hover: #FFFFFF;
+}
+
+span {
+  font-weight: bold;
+  color: #424;
+  font-size: x-large;
+}
+
+.bold {
+  font-weight: bold;
+  color: #424;
+}
+.block {
+  display: block;
+  text-align: center;
+}
+
+ion-title{
+  font-size: x-large;
+  background-color: #424;
+  
+  font-weight: bolder;
+  padding: 5%;
+  }
+  .app{
+    background-color: #0a0a0a;
+  }

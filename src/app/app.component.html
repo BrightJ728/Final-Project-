@@ -1,0 +1,95 @@
+<!-- <ion-app>
+  <ion-content>
+    
+  </ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app> -->
+<ion-app>
+     
+  <!-- side menu tab      -->
+ <ion-split-pane  when="xl" contentId="main-content">
+   
+   <ion-menu swipe-gesture="true" side = "start" menuId= "custom" type="overlay" contentId="main-content" >
+    <ion-menu-toggle>
+      
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    
+    </ion-menu-toggle> 
+    
+<br>
+     <ion-content>
+       <ion-list>
+         <!--linking the content of the menu bar to a page-->
+         
+         <ion-menu-toggle>
+           <ion-item (click)="signOut()" >
+             <ion-icon slot="start" name='log-out'></ion-icon>
+             <ion-label>
+               Sign-Out
+             </ion-label>
+           </ion-item>
+           
+           <ion-menu-toggle [autoHide]="false">
+            <ion-item button routerLink = "profile-page">
+              <ion-icon slot="start" name='person'></ion-icon>
+              <ion-label>
+               Your Profile
+              </ion-label>
+            </ion-item>
+            
+          </ion-menu-toggle>
+         </ion-menu-toggle> 
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item [routerLink] ="['/home']">
+             <ion-icon slot="start" name='navigate'></ion-icon>
+             <ion-label>
+              Add Profile
+             </ion-label>
+           </ion-item>
+         </ion-menu-toggle>
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item  routerLink = "all-profiles">
+             <ion-icon slot="start" name='person'></ion-icon>
+             <ion-label>
+            View Teachers
+             </ion-label>
+           </ion-item>
+             </ion-menu-toggle>
+       
+  
+            
+  
+       </ion-list>
+       
+     </ion-content>
+   </ion-menu>
+   <div class="ion-page" id="main-content">
+     <ion-header>
+       <ion-toolbar>
+         <ion-buttons slot="start">
+           <ion-menu-toggle>
+             <ion-button>
+               <ion-icon slot="icon-only" name="menu">
+                 
+               </ion-icon>
+             </ion-button>
+           </ion-menu-toggle>
+         </ion-buttons>
+         
+       </ion-toolbar>
+     </ion-header>
+
+     <ion-content class="ion-padding">
+
+       <!-- horizontal menu: home, add contact, manage contact -->
+             <ion-tabs>        
+           </ion-tabs>
+     </ion-content>
+   </div>
+    <ion-router-outlet main-content></ion-router-outlet>
+
+ </ion-split-pane>
+       
+</ion-app> 

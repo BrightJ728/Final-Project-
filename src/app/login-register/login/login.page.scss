@@ -1,0 +1,59 @@
+ion-content{
+  background-color: #424;
+  color: white;
+  margin-top: 50%;
+}
+
+.p1{
+  font-weight: bolder;
+}
+
+h5, p {
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 767px) {
+  ion-card {
+    width: 600px;
+    margin: auto;
+  }
+}
+ion-title{
+font-size: x-large;
+background-color: #424;
+
+font-weight: bolder;
+padding: 5%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+.login-button {
+  --background:#424; 
+  color:#FFFFFF; 
+  --background-hover:#424; 
+  --color-hover: #FFFFFF;
+}
+
+span {
+  font-weight: bold;
+  color: #424;
+  font-size: x-large;
+}
+
+.block {
+  display: block;
+  text-align: center;
+  font-size: large;
+  
+}
+
+ion-card{margin-top: 40%;}

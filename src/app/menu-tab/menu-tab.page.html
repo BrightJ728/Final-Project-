@@ -1,0 +1,122 @@
+<!-- <ion-app>
+  <ion-content>
+    
+  </ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app> -->
+<ion-app>
+     
+  <!-- side menu tab      -->
+ <ion-split-pane when="sm" contentId="main-content">
+   <ion-menu contentId="main-content" menuId="main">
+     <ion-header>
+       <ion-toolbar color="primary">
+         <ion-title>Menu</ion-title>
+       </ion-toolbar>
+     </ion-header>
+
+     <ion-content>
+       <ion-list>
+         <!--linking the content of the menu bar to a page-->
+         
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item  [routerLink] = " ['/messages', 3]">
+             <ion-icon slot="start" name='mail'></ion-icon>
+             <ion-label>
+               Indox
+             </ion-label>
+           </ion-item>
+           
+         </ion-menu-toggle> 
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item button routerLink ="/sent">
+             <ion-icon slot="start" name='navigate'></ion-icon>
+             <ion-label>
+              Outbox
+             </ion-label>
+           </ion-item>
+         </ion-menu-toggle>
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item button routerLink = "/favorite">
+             <ion-icon slot="start" name='heart'></ion-icon>
+             <ion-label>
+              Favorite
+             </ion-label>
+           </ion-item>
+             </ion-menu-toggle>
+       
+         <ion-menu-toggle [autoHide]="false">
+           <ion-item button routerLink = "/archive">
+             <ion-icon slot="start" name='archive'></ion-icon>
+             <ion-label>
+              Archive
+             </ion-label>
+           </ion-item>
+             </ion-menu-toggle>
+             <ion-menu-toggle [autoHide]="false">
+               <ion-item button routerLink = "/deleted">
+                 <ion-icon slot="start" name='trash'></ion-icon>
+                 <ion-label>
+                  Trash
+                 </ion-label>
+               </ion-item>
+               
+             </ion-menu-toggle>
+             <ion-menu-toggle [autoHide]="false">
+               <ion-item button routerLink = "spam">
+                 <ion-icon slot="start" name='alert-circle-sharp'></ion-icon>
+                 <ion-label>
+                  Spam
+                 </ion-label>
+               </ion-item>
+                 </ion-menu-toggle>
+       </ion-list>
+     </ion-content>
+   </ion-menu>
+   <div class="ion-page" id="main-content">
+     <ion-header>
+       <ion-toolbar>
+         <ion-buttons slot="start">
+           <ion-menu-toggle>
+             <ion-button>
+               <ion-icon slot="icon-only" name="menu">
+                 
+               </ion-icon>
+             </ion-button>
+           </ion-menu-toggle>
+         </ion-buttons>
+         
+       </ion-toolbar>
+     </ion-header>
+
+     <ion-content class="ion-padding">
+
+       <!-- horizontal menu: home, add contact, manage contact -->
+             <ion-tabs>
+         <ion-tab-bar slot="top">
+           <ion-tab-button tab="home">
+             <ion-icon name="home-outline"></ion-icon>
+             <ion-label>Home</ion-label>
+             <ion-badge>H</ion-badge>
+           </ion-tab-button>
+       
+           <ion-tab-button tab="add-contact">
+             <ion-icon name="person-add"></ion-icon>
+             <ion-label>Add contact</ion-label>
+             <ion-badge>Phone</ion-badge>
+           </ion-tab-button>
+       
+           <ion-tab-button tab="manage-contact">
+             <ion-icon name="create"></ion-icon>
+             <ion-label>Manage contacts</ion-label>
+             <ion-badge><em>edit</em></ion-badge>
+             
+           </ion-tab-button>
+           </ion-tab-bar>
+           </ion-tabs>
+     </ion-content>
+   </div>
+
+ </ion-split-pane>
+       
+</ion-app> 
